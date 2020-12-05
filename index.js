@@ -45,9 +45,9 @@ bot.command('Начать', (ctx) => {
             const nonActiveAdmins = [];
             data.response.items.forEach(i => {
                 if (i.online == 1) {
-                    activeAdmins.push(`${i.first_name} ${i.last_name} - https://vk.com/${i.id}`)
+                    activeAdmins.push(`${i.first_name} ${i.last_name} - https://vk.com/id${i.id}`)
                 } else {
-                    nonActiveAdmins.push(`${i.first_name} ${i.last_name} - https://vk.com/${i.id}`)
+                    nonActiveAdmins.push(`${i.first_name} ${i.last_name} - https://vk.com/id${i.id}`)
                 }
             })
             ctx.reply(`Администраторы группы онлайн:\n${activeAdmins.join("\n")}\nАдминистраторы группы оффлайн:\n${nonActiveAdmins.join("\n")}`)
@@ -76,13 +76,13 @@ bot.command('/bug', (ctx) => {
             if (!args[0]) {
                 return ctx.reply('[ПОМИЛКА] Вірний синтаксис /bug [Ваша проблема/помилка]')
             }
-            await bot.sendMessage(198872768, `[БАГ] Отправил: https://vk.com/${ctx.message.user_id}. Содержание: ${args.slice(0).join(" ")}`)
+            await bot.sendMessage(198872768, `[БАГ] Отправил: https://vk.com/id${ctx.message.user_id}. Содержание: ${args.slice(0).join(" ")}`)
             await ctx.reply('Відправленно успішно!')
         } else {
             if (!args[0]) {
                 return ctx.reply('[ОШАБКА] Синтаксис /bug [Ваша пробема/ошибка]')
             }
-            await bot.sendMessage(198872768, `[БАГ] Отправил: https://vk.com/${ctx.message.user_id}. Содержание: ${args.slice(0).join(" ")}`)
+            await bot.sendMessage(198872768, `[БАГ] Отправил: https://vk.com/id${ctx.message.user_id}. Содержание: ${args.slice(0).join(" ")}`)
             await ctx.reply('Отправленно успешно!')
         }
     })
