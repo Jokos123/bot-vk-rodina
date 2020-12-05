@@ -1,0 +1,24 @@
+{
+  "name": "bot-vk-rodina",
+  "version": "1.2.3",
+  "description": "Bot VK Rodina 01",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "engines": {
+    "npm": "6.x",
+    "node": "12.x"
+  },
+  "author": "Developer Montano",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
+    "dotnet": "^1.1.4",
+    "mongoose": "^5.10.15",
+    "node-vk-bot-api": "^3.3.7",
+    "nodemon": "^2.0.6"
+  }
+}
